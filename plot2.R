@@ -14,7 +14,7 @@ readHPC$date_time <- strptime(dt, "%Y-%d-%m %H:%M:%S")
 
 Sys.setlocale("LC_TIME", "C") 
 
-with(household_data, plot(Time_new, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
+with(readHPC, plot(date_time, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 
 dev.copy(png, file = "plot2.png", width = 480, height = 480)
 
